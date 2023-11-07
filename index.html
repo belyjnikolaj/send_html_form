@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Send HTML_Form to Email</title>
+  </head>
+  <body>
+    <div class="wraper">
+      <form
+        method="POST"
+        action="sendmail/sendmail.php"
+        enctype="multipart/form-data"
+        class="form"
+      >
+        <input
+          required
+          type="text"
+          placeholder="Name"
+          name="name"
+          class="form__input"
+        />
+        <input
+          required
+          type="email"
+          placeholder="E-mail"
+          name="email"
+          class="form__input"
+        />
+        <div class="form__options options-form">
+          <h4 class="options-form__title">Do you like Code Only?</h4>
+          <label class="options-form__item">
+            <input
+              checked
+              type="radio"
+              name="like"
+              value="Yes!"
+              class="options-form__input"
+            />
+            <span class="options-form__text">Yes!</span>
+          </label>
+          <label class="options-form__item">
+            <input
+              checked
+              type="radio"
+              name="like"
+              value="Yes of course!"
+              class="options-form__input"
+            />
+            <span class="options-form__text">Yes of course!</span>
+          </label>
+        </div>
+        <textarea
+          name="message"
+          placeholder="Message"
+          class="form__input"
+        ></textarea>
+        <div class="form__file file-form">
+          <label class="file-form__item">
+            <input
+              name="image"
+              type="file"
+              accept=".jpg, .png"
+              class="file-form__input"
+            />
+            <div class="file-form__button button">Choose File</div>
+          </label>
+
+          <div class="file-form__name"></div>
+        </div>
+        <label class="form__checkbox checkbox-form">
+          <input
+            required
+            type="checkbox"
+            name="thebest"
+            class="checkbox-form__input"
+          />
+          <span class="checkbox-form__text"
+            >Code Only the best channel in the world!</span
+          >
+        </label>
+        <button class="form__button button">Send</button>
+      </form>
+    </div>
+    <script src="js/script.js" type="module"></script>
+  </body>
+</html>
