@@ -21,6 +21,7 @@ body {
   padding: 2.5rem;
   border-radius: 0.9375rem;
   background-color: #1b2028;
+  margin: 50px auto;
 }
 
 .form-sending {
